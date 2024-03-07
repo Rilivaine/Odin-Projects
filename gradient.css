@@ -1,0 +1,60 @@
+#gradient {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+	height: 100vh;
+    
+    background: linear-gradient(45deg, #5d0bac, #dda14d, #e46c6c, #27f7d4);
+    background-size: 400% 400%;
+
+    animation: gradient 20s ease infinite;
+    -webkit-animation: gradient 20s ease infinite;
+    -moz-animation: gradient 20s ease infinite;
+    -o-animation: gradient 20s ease infinite;
+}
+
+#gradient2 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+	height: 100vh;
+
+    background: linear-gradient(315deg, #b75484, #844bbb, #8dc396, #96c16c);
+    background-size: 400% 400%;
+
+    -webkit-animation: gradient 15s ease infinite;
+    -moz-animation: gradient 15s ease infinite;
+    -o-animation: gradient 15s ease infinite;
+    animation: gradient 15s ease infinite;
+
+    mix-blend-mode: color-burn;
+    opacity: .5;
+
+    filter: brightness(70%);
+}
+
+@keyframes gradient {
+    0%{background-position:0% 68%}
+    50%{background-position:100% 33%}
+    100%{background-position:0% 68%}
+}
+
+@-webkit-keyframes gradient {
+    0%{background-position:0% 68%}
+    50%{background-position:100% 33%}
+    100%{background-position:0% 68%}
+}
+
+@-moz-keyframes gradient {
+    0%{background-position:0% 68%}
+    50%{background-position:100% 33%}
+    100%{background-position:0% 68%}
+}
+
+@-o-keyframes gradient {
+    0%{background-position:0% 68%}
+    50%{background-position:100% 33%}
+    100%{background-position:0% 68%}
+}
