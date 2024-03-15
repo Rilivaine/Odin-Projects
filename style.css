@@ -45,7 +45,6 @@ a:hover {
 
 #projects-list {
     position: fixed;
-    min-width: 25%;
     bottom: 5%;
     background-color: #ffffff10;
     color: white;
