@@ -1,0 +1,159 @@
+* {
+  min-width: 0px;
+}
+
+body {
+  background-color: #222222;
+  color: #dddddd;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(-10deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+#game-title {
+  text-align: center;
+}
+
+#score-display {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  gap: 2em;
+}
+
+#match-display {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2em;
+}
+
+#game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2em;
+}
+
+#choice-selection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.choice {
+  width: 100px;
+  height: 100px;
+  background-color: #47364f;
+  border-radius: 10px;
+  box-shadow: inset 0px -4px 0px 0px #440171;
+
+  display: grid;
+  place-items: center;
+
+  i {
+    font-size: 4em;
+
+    &.shake {
+      animation: shake 0.2s infinite;
+    }
+
+  }
+}
+
+#play-btn {
+  cursor: pointer;
+  height: 2.2em;
+  background-color: #666666;
+  border-radius: 10px;
+  box-shadow: inset 0px -8px 0px 0px #444444;
+  align-self: stretch;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 18px;
+
+  cursor: pointer;
+  transition: all, 0.2s linear;
+
+  &:hover {
+    background-color: #444444;
+    box-shadow: inset 0px -8px 0px 0px #333333;
+  }
+}
+
+.choice-btn {
+  width: 100px;
+  height: 100px;
+  background-color: #666666;
+  border-radius: 10px;
+  box-shadow: inset 0px -8px 0px 0px #444444;
+
+  display: grid;
+  place-items: center;
+
+  cursor: pointer;
+  transition: all, 0.2s linear;
+
+  &:hover {
+    background-color: #444444;
+    box-shadow: inset 0px -8px 0px 0px #333333;
+  }
+
+  i {
+    width: 100px;
+    height: 100px;
+    display: grid;
+    place-items: center;
+    font-size: 4em;
+    user-select: none;
+  }
+
+  &.active {
+    box-shadow: none;
+    transform: translateY(10px);
+  }
+}
+
+#user-score::before {
+  content: "You: ";
+}
+
+#computer-score::before {
+  content: "Computer: ";
+}
