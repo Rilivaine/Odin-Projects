@@ -95,28 +95,6 @@ body {
   }
 }
 
-#play-btn {
-  cursor: pointer;
-  height: 2.2em;
-  background-color: #666666;
-  border-radius: 10px;
-  box-shadow: inset 0px -8px 0px 0px #444444;
-  align-self: stretch;
-
-  display: grid;
-  place-items: center;
-
-  font-size: 18px;
-
-  cursor: pointer;
-  transition: all, 0.2s linear;
-
-  &:hover {
-    background-color: #444444;
-    box-shadow: inset 0px -8px 0px 0px #333333;
-  }
-}
-
 .choice-btn {
   width: 100px;
   height: 100px;

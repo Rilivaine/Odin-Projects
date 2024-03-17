@@ -1,4 +1,4 @@
-import { chooseWeapon, playRound } from "./game.js";
+import { playRound } from "./game.js";
 
 export function buildPage() {
   const container = document.createElement("div");
@@ -52,7 +52,7 @@ export function buildPage() {
   rockBtn.classList.add("choice-btn");
   rockBtn.innerHTML = '<i class="fa-regular fa-hand-back-fist"></i>';
   rockBtn.addEventListener("click", (e) => {
-    chooseWeapon(e);
+    playRound(e);
   });
   choiceSelection.appendChild(rockBtn);
 
@@ -61,7 +61,7 @@ export function buildPage() {
   paperBtn.classList.add("choice-btn");
   paperBtn.innerHTML = '<i class="fa-regular fa-hand"></i>';
   paperBtn.addEventListener("click", (e) => {
-    chooseWeapon(e);
+    playRound(e);
   });
   choiceSelection.appendChild(paperBtn);
 
@@ -70,17 +70,9 @@ export function buildPage() {
   scissorsBtn.classList.add("choice-btn");
   scissorsBtn.innerHTML = '<i class="fa-regular fa-hand-scissors fa-rotate-90"></i>';
   scissorsBtn.addEventListener("click", (e) => {
-    chooseWeapon(e);
+    playRound(e);
   });
   choiceSelection.appendChild(scissorsBtn);
-
-  const playButton = document.createElement("div");
-  playButton.setAttribute("id", "play-btn");
-  playButton.textContent = "Play";
-  playButton.addEventListener("click", () => {
-    playRound();
-  });
-  gameBoard.appendChild(playButton);
 
   document.body.appendChild(container);
 }

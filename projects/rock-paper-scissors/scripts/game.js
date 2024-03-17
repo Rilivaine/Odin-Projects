@@ -1,19 +1,7 @@
 /** @param {MouseEvent} event */
-export function chooseWeapon(event) {
-  document.querySelectorAll(".choice-btn").forEach((button) => {
-    button.classList.remove("active");
-  });
+export function playRound(event) {
+  chooseWeapon(event);
 
-  event.target.parentElement.classList.add("active");
-}
-
-function unchooseWeapon() {
-  document.querySelectorAll(".choice-btn").forEach((button) => {
-    button.classList.remove("active");
-  });
-}
-
-export function playRound() {
   const userChoice = userPlay();
   const computerChoice = computerPlay();
 
@@ -38,6 +26,22 @@ export function playRound() {
     unchooseWeapon();
   }, 500);
 }
+
+/** @param {MouseEvent} event */
+function chooseWeapon(event) {
+  document.querySelectorAll(".choice-btn").forEach((button) => {
+    button.classList.remove("active");
+  });
+
+  event.target.parentElement.classList.add("active");
+}
+
+function unchooseWeapon() {
+  document.querySelectorAll(".choice-btn").forEach((button) => {
+    button.classList.remove("active");
+  });
+}
+
 
 function getResult(userChoice, computerChoice) {
   if (!userChoice) {
