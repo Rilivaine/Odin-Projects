@@ -12,17 +12,15 @@ export function createSettingsSection() {
   settingsSection.append(checkboxContainer);
 
   const { rangeInputContainer } = createRangeInput('Canvas Size', 'canvas-size', 8, 128, 1);
+  rangeInputContainer.append(createCanvasSizeButton());
   settingsSection.append(rangeInputContainer);
-
-
-  settingsSection.append(createCanvasSizeButton());
 
   return settingsSection;
 }
 
 function createCheckbox(text, id) {
   const checkboxContainer = document.createElement('div');
-  checkboxContainer.classList.add('checkbox-container');
+  checkboxContainer.classList.add('setting', 'checkbox-container');
 
   const label = document.createElement('span');
   label.textContent = text;
@@ -38,7 +36,7 @@ function createCheckbox(text, id) {
 
 function createRangeInput(text, id, min, max, step) {
   const rangeInputContainer = document.createElement('div');
-  rangeInputContainer.classList.add('range-input-container');
+  rangeInputContainer.classList.add('setting', 'range-input-container');
 
   const label = document.createElement('span');
   label.textContent = text;

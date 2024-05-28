@@ -1,4 +1,4 @@
-import { isMobile } from '../../common.js';
+import { isMobile } from '../../scripts/common.js';
 import { getCheckboxSetting } from './settings.js';
 
 export function createCanvas() {
