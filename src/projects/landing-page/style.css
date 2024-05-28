@@ -79,6 +79,7 @@ nav ul {
 .hero {
   padding-bottom: 0;
   background-color: var(--bg-dark);
+  padding-top: 20px;
 
   .container {
     display: flex;
@@ -156,7 +157,7 @@ nav ul {
 }
 
 .quote {
-  background-color: var(--text-light);
+  background-color: lightgray;
   padding: 10px;
   width: 100%;
   margin: 10px 0px;
@@ -179,7 +180,7 @@ nav ul {
 
 .container {
   .call-to-action {
-    margin: 20px 0px;
+    margin: 20px auto;
 
     background-color: var(--bg-dark);
     border-radius: 50px;
